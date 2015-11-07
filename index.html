@@ -29,7 +29,7 @@
               <li><a href="#html-syntax">Syntax</a></li>
               <li><a href="#html-setup">Document Setup</a></li>
               <li><a href="#html-boolean">Boolean Attributes</a></li>
-              <li><a href="#html-markup">Lean Markup</a></li>
+              <li><a href="#html-markup">Reducing Markup</a></li>
               <li><a href="#html-semantics">Semantics</a></li>
               <li><a href="#html-validation">Validation</a></li>
             </ul>
@@ -49,10 +49,10 @@
     
     <section id="html">
       <div class="main-content">
-        <h3>HTML</h3>
+        <h1>HTML</h1>
         
         <div id="html-syntax" class="sub-content">
-          <h4>Syntax</h4>
+          <h2>Syntax</h2>
           <ul>
             <li>Use soft tabs with two spaces for Rails, or four spaces for PHP — they're the only way to guarantee code renders the same in any environment.</li>
             <li>Always use double quotes for attribute values.</li>
@@ -64,8 +64,8 @@
         </div>
         
         <div id="html-setup" class="sub-content">
-          <h4>Document Setup</h4>
-          <h5>Doctype</h5>
+          <h2>Document Setup</h2>
+          <h3>Doctype</h3>
           <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
           <pre>
             <code>
@@ -76,7 +76,7 @@
   &lt;/html&gt;
             </code>
           </pre>
-          <h5>Language Attribute</h5>
+          <h4>Language Attribute</h4>
           <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
           <pre>
             <code>
@@ -85,14 +85,14 @@
   &lt;/html&gt;
             </code>
           </pre>
-          <h5>IE Compatability Mode</h5>
+          <h4>IE Compatability Mode</h4>
           <p>Internet Explorer supports the use of a document compatibility <meta> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.</p>
           <pre>
             <code>
   &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
             </code>
           </pre>
-          <h5>Character Encoding</h5>
+          <h4>Character Encoding</h4>
           <p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
           <pre>
             <code>
@@ -101,7 +101,7 @@
               </head>
             </code>
           </pre>
-          <h5>Mobile Meta Tags</h5>
+          <h4>Mobile Meta Tags</h4>
           <p>Include the following meta tags to deal with scaling on mobile browsers.</p>
           <pre>
             <code>
@@ -111,7 +111,7 @@
         </div>
         
         <div id="html-boolean" class="sub-content">
-          <h4>Boolean Attributes</h4>
+          <h3>Boolean Attributes</h3>
           <p>Do not add a value to boolean attributes. The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
           <pre>
             <code>
@@ -122,7 +122,7 @@
         </div>
         
         <div id="html-markup" class="sub-content">
-          <h4>Reducing Markup</h4>
+          <h3>Reducing Markup</h3>
           <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
           <pre>
             <code>
@@ -138,12 +138,12 @@
         </div>
         
         <div id="html-semantics" class="sub-content">
-          <h4>Semantic Markup</h4>
+          <h3>Semantics</h3>
           <p>Markup should be as semantic as possible and presentational markup should be avoided however it is understood that to make something look awesome, this is sometimes unavoidable. Be aware of the document outline produced by your markup, and ensure it makes sense.</p>
         </div>
         
         <div id="html-validation" class="sub-content">
-          <h4>Validation</h4>
+          <h3>Validation</h3>
           <p>Code should always be tested against the W3C, to ensure the markup is well formed, however it is understood that 100% valid code is not always possible.</p>
         </div>
         
