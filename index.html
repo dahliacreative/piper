@@ -67,27 +67,27 @@
           <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
           <pre>
             <code>
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                &lt;head&gt;
-                &lt;/head&gt;
-              &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+&lt;/html&gt;
             </code>
           </pre>
           <h5>Language Attribute</h5>
           <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
           <pre>
             <code>
-              &lt;html lang="en-us"&gt;
-                &lt;!-- ... --&gt;
-              &lt;/html&gt;
+&lt;html lang="en-us"&gt;
+  &lt;!-- ... --&gt;
+&lt;/html&gt;
             </code>
           </pre>
           <h5>IE Compatability Mode</h5>
           <p>Internet Explorer supports the use of a document compatibility <meta> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.</p>
           <pre>
             <code>
-              &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
             </code>
           </pre>
           <h5>Character Encoding</h5>
@@ -95,7 +95,7 @@
           <pre>
             <code>
               <head>
-                &lt;meta charset="UTF-8"&gt;
+&lt;meta charset="UTF-8"&gt;
               </head>
             </code>
           </pre>
@@ -103,7 +103,7 @@
           <p>Include the following meta tags to deal with scaling on mobile browsers.</p>
           <pre>
             <code>
-              &lt;meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+&lt;meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
             </code>
           </pre>
         </div>
@@ -114,8 +114,8 @@
           <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
           <pre>
             <code>
-              &lt;input type="text" disabled&gt;
-              &lt;input type="checkbox" checked&gt;
+&lt;input type="text" disabled&gt;
+&lt;input type="checkbox" checked&gt;
             </code>
           </pre>
         </div>
@@ -125,13 +125,13 @@
           <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
           <pre>
             <code>
-              &lt;!-- Not so great --&gt;
-              &lt;span class="avatar"&gt;
-                &lt;img src="..."&gt;
-              &lt;/span&gt;
+&lt;!-- Not so great --&gt;
+&lt;span class="avatar"&gt;
+  &lt;img src="..."&gt;
+&lt;/span&gt;
 
-              &lt;!-- Better --&gt;
-              &lt;img class="avatar" src="..."&gt;
+&lt;!-- Better --&gt;
+&lt;img class="avatar" src="..."&gt;
             </code>
           </pre>
         </div>
