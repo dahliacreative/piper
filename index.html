@@ -17,23 +17,17 @@
       <a href="https://github.com/dahliacreative/piper/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/dahliacreative/piper/tarball/master" class="btn">Download .tar.gz</a>
     </section>
-
-    <section class="main-content">
-      
-      <div class="contents">
+    
+    <section class="contents">
+      <div class="main-content">
         <h3>Table of contents</h3>
         <ul>
           <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#general">General coding quidelines</a></li>
           <li>
             <a href="#html">HTML</a>
             <ul>
               <li><a href="">Syntax</a></li>
-              <li><a href="">Doctype</a></li>
-              <li><a href="">Language Attribute</a></li>
-              <li><a href="">IE Compatibility Mode</a></li>
-              <li><a href="">Character Encoding</a></li>
-              <li><a href="">Mobile Meta Tags</a></li>
+              <li><a href="">Document Setup</a></li>
               <li><a href="">Boolean Attributes</a></li>
               <li><a href="">Lean Markup</a></li>
               <li><a href="">Semantics</a></li>
@@ -42,13 +36,112 @@
           </li>
         </ul>
       </div>
+    </section>
+    
+    <section id="introduction">
+      <div class="main-content">
+        <h3>Introduction</h3>
+        <p>Welcome to Primer, the Rawnet UI Styleguide.</p>
+        <p>The aim of this styleguide is to ensure consistent coding practices across all developers in the team, which in turn will enable all developers to easily pick up and maintain any project.</p>
+        <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+        <p>You should do your best to make sure any code you contribute is in a fit state for the next developer. We encourage readabilty and clarity above abstraction and cleverness.</p>
+      </div>
+    </section>
+    
+    <section id="html">
+      <div class="main-content">
+        <h3>HTML</h3>
+        
+        <div id="syntax" class="sub-content">
+          <h4>Syntax</h4>
+          <p>Use soft tabs with two spaces for Rails, or four spaces for PHP — they're the only way to guarantee code renders the same in any environment.</p>
+          <p>Always use double quotes for attribute values.</p>
+          <p>Use whitespace to define logical blocks of code.</p>
+          <p>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</p>
+          <p>Always use sentence casing for all text within HTML and use CSS to apply lowercasing, or uppercasing to meet design requirements.</p>
+          <p>Please seperate out re-usable code into partials where possible/appropriate.</p>
+        </div>
+        
+        <div id="doc-setup" class="sub-content">
+          <h4>Document Setup</h4>
+          <h5>Doctype</h5>
+          <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+          <code>
+            <!DOCTYPE html>
+              <html>
+                <head>
+                </head>
+              </html>
+          </code>
+          <h5>Language Attribute</h5>
+          <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+          <code>
+            <html lang="en-us">
+              <!-- ... -->
+            </html>
+          </code>
+          <h5>IE Compatability Mode</h5>
+          <p>Internet Explorer supports the use of a document compatibility <meta> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with edge mode.</p>
+          <code>
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+          </code>
+          <h5>Character Encoding</h5>
+          <p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
+          <code>
+            <head>
+              <meta charset="UTF-8">
+            </head>
+          </code>
+          <h5>Mobile Meta Tags</h5>
+          <p>Include the following meta tags to deal with scaling on mobile browsers.</p>
+          <code>
+            <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          </code>
+        </div>
+        
+        <div id="boolean" class="sub-content">
+          <h4>Boolean Attributes</h4>
+          <p>Do not add a value to boolean attributes</p>
+          <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+          <code>
+            <input type="text" disabled>
+            <input type="checkbox" checked>
+          </code>
+        </div>
+        
+        <div id="lean-markup" class="sub-content">
+          <h4>Reducing Markup</h4>
+          <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+          <code>
+            <!-- Not so great -->
+            <span class="avatar">
+              <img src="...">
+            </span>
 
+            <!-- Better -->
+            <img class="avatar" src="...">
+          </code>
+        </div>
+        
+        <div id="semantics" class="sub-content">
+          <h4>Semantic Markup</h4>
+          <p>Markup should be as semantic as possible and presentational markup should be avoided however it is understood that to make something look awesome, this is sometimes unavoidable.</p>
+          <p>Be aware of the document outline produced by your markup, and ensure it makes sense.</p>
+        </div>
+        
+        <div id="markup-validation" class="sub-content">
+          <h4>Validation</h4>
+          <p>Code should always be tested against the W3C, to ensure the markup is well formed, however it is understood that 100% valid code is not always possible.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="main-content">
       <footer class="site-footer">
         <p>&copy; Rawnet 2015</p>
       </footer>
-
     </section>
-
   
   </body>
 </html>
