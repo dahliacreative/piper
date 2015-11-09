@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Piper by dahliacreative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Piper</h1>
+      <h2 class="project-tagline">Rawnet UI Styleguide</h2>
+      <a href="https://github.com/dahliacreative/piper" class="btn">View on GitHub</a>
+      <a href="https://github.com/dahliacreative/piper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/dahliacreative/piper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="contents">
+      <div class="main-content">
+        <h1>In this section</h1>
+        <ul>
+          <li><a href="#syntax">Syntax</a></li>
+          <li><a href="#bourbon">Bourbon</a></li>
+          <li><a href="#sass">Sass - Mixins, Functions &amp; Variables</a></li>
+          <li><a href="#bem">BEM (Block, Element, Modifier)</a></li>
+          <li><a href="#declarations">Declaration Order</a></li>
+          <li><a href="#media-queries">Media Query Placement</a></li>
+          <li><a href="#shorthand">Shorthand Notation</a></li>
+          <li><a href="#classes">Class Names</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <hr>
+    
+    <section>
+      <div class="main-content">
+        <h1>Stylesheets</h1>
+        
+        <div id="syntax" class="sub-content">
+          <h2>Syntax</h2>
+          <ul>
+            <li>Use soft tabs with two spaces for Rails, or four spaces for PHP — they're the only way to guarantee code renders the same in any environment.</li>
+            <li>Use the <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">Sass indented syntax</a>.</li>
+            <li>Styles should be separated out in to appropriate files/folders, see the accompanying folder structure to get a good idea of where things should go.</li>
+            <li>Comma-separated values should include a space after each comma.</li>
+            <li>Make use of Sass color functions e.g. <pre><code>rgba(#000, 0.5)</code></pre> and <pre><code>lighten(#000, 10%)</code></pre>.</li>
+            <li>Lowercase all HEX values.</li>
+            <li>Use shorthand HEX values where possible.</li>
+            <li>Quote attribute values in selectors, e.g. <pre><code>input[type="text"]</code></pre>.</li>
+            <li>Avoid specifying units for zero values, e.g. <pre><code>margin: 0</code></pre> instead of <pre><code>margin: 0px</code></pre>.</li>
+            <li>Use white space to separate logical blocks of code, e.g. a blank line between modifiers / elements.</li>
+          </ul>
+        </div>
+        
+        <hr>
+
+        <div id="bourbon" class="sub-content">
+          <h2>Bourbon</h2>
+          <p>We make use of the bourbon library, they have lots of useful mixins to save you lots of time, they also save you having to add vendor prefixes.</p>
+<pre><code>.my-block
+  +position(absolute, 10px null null 20px)
+  +size(200px 300px)
+  +padding(20px)
+  +transition(background-color 0.3s)</code></pre>
+        </div>
+
+        <hr>
+
+        <div id="sass" class="sub-content">
+          <h2>Sass - Minxins, Functions &amp; Variables</h2>
+          <p>Sass has a lot of handy features to help help you code, cleaner, smarter and quicker, we suggest you familiarise yourself with them and start using them.</p>
+          <h3>Variables</h3>
+          <ul>
+            <li>Global variables should be stored in an appropriate file, e.g. <pre><code>fonts.sass</code></pre>, in the Settings folder.</li>
+            <li>Variables specific to a certain block / template should be stored at the top of the appropriate file.</li>
+            <li>Variable names should be lowercase and hyphenated.</li>
+          </ul>
+
+          <h3>Mixins/Functions</h3>
+          <p>We have a set of Rawnet, pre-defined mixins/functions.</p>
+          <p>When creating your own, mixins/functions should be stored in their own file in the tools folder under their appropriate sub-folder, e.g. <pre><code>tools/mixins/grid.sass</code></pre>.</p>
+          <p>Try not to get too obscure with your mixins/functions, they can help you save a lot of time, but if someone new comes to the project, they need to understand what everything does.</p>
+          <p>Study the accompanying folder structure to get a good idea of where things should go.</p>
+        </div>
+
+        <hr>
+
+        <div id="bem" class="sub-content">
+          <h2>BEM</h2>
+          <p>We follow the BEM (Block Element Modifier) coding standard, it helps make our CSS maintainable and scalable, while keeping specificty as low as possible.</p>
+<pre><code>.widget
+  width: 200px
+  background-color: #fff
+  border: 1px solid #ccc
+
+  &--modifier
+    background-color: #ff6600
+    .widget__element
+      display: block
+
+  &__element
+    display: inline-block
+    font-size: 20px
+    color: #ff6600
+
+    &--modifier
+      color: #fff</code></pre>
+        </div>
+
+        <hr>
+        
+        <div id="declarations" class="sub-content">
+          <h3>Declaration Order</h3>
+          <p>Related property declarations should be grouped together following the order:</p>
+          <ol>
+            <li>Positioning</li>
+            <li>Box Model</li>
+            <li>Visual</li>
+            <li>Typographic</li>
+          </ol>
+          <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
+          <p>Everything else takes place inside the component or without impacting the previous two sections, and thus they come last.</p>
+<pre><code>.declaration-order
+  // Positioning
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1
+
+  // Box model
+  display: block
+  float: right
+  width: 100px
+  height: 100px
+
+  // Visual
+  background-color: #fff
+  border: 1px solid #ccc
+  border-radius: 3px
+
+  // Typography
+  font: normal 13px arial
+  line-height: 1.5
+  text-align: center
+  color: #ddd
+
+  // Misc
+  opacity: 1</code></pre>
+        </div>
+
+        <hr>
+
+        <div id="media-queries" class="sub-content">
+          <h2>Media Query Placement</h2>
+          <p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.</p>
+        </div>
+
+        <hr>
+
+        <div id="shorthand" class="sub-content">
+          <h2>Shorthand Notation</h2>
+          <p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
+          <ul>
+            <li>
+              <pre><code>padding</code></pre>
+            </li>
+            <li>
+              <pre><code>margin</code></pre>
+            </li>
+            <li>
+              <pre><code>font</code></pre>
+            </li>
+            <li>
+              <pre><code>background</code></pre>
+            </li>
+            <li>
+              <pre><code>border</code></pre>
+            </li>
+            <li>
+              <pre><code>border-radius</code></pre>
+            </li>
+          </ul>
+          <p>Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
+          <p>You can use bourbon's padding/margin mixins to avoid setting values unnecessarily, e.g. <pre><code>+padding(10px null 0 null)</code></pre>.</p>
+        </div>
+
+        <hr>
+
+        <div id="classes" class="sub-content">
+          <h2>Class Names</h2>
+          <p>Firstly, always style using classes, not IDs.</p>
+          <ul>
+            <li>Keep class names lowercase and hyphenated.</li>
+            <li>Avoid abbreviations, it may make sense to you, but it might not to someone else.</li>
+            <li>Keep class names as short and succinct as possible.</li>
+            <li>Use meaningful names; use structural or purposeful names over presentational.</li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="main-content">
+      <footer class="site-footer">
+        <p>&copy; Rawnet 2015</p>
+      </footer>
+    </section>
+  
+  </body>
+</html>
