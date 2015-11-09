@@ -141,6 +141,10 @@ a {
     white-space: pre;
     background: transparent;
     border: 0; }
+  .main-content p pre,
+  .main-content li pre {
+    display: inline-block;
+  }
 .main-content .highlight {
   margin-bottom: 1rem; }
   .main-content .highlight pre {
