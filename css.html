@@ -47,11 +47,11 @@
             <li>Use the <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">Sass indented syntax</a>.</li>
             <li>Styles should be separated out in to appropriate files/folders, see the accompanying folder structure to get a good idea of where things should go.</li>
             <li>Comma-separated values should include a space after each comma.</li>
-            <li>Make use of Sass color functions e.g. <pre><code>rgba(#000, 0.5)</code></pre> and <pre><code>lighten(#000, 10%)</code></pre>.</li>
+            <li>Make use of Sass color functions e.g. <code>rgba(#000, 0.5)</code> and <code>lighten(#000, 10%)</code>.</li>
             <li>Lowercase all HEX values.</li>
             <li>Use shorthand HEX values where possible.</li>
-            <li>Quote attribute values in selectors, e.g. <pre><code>input[type="text"]</code></pre>.</li>
-            <li>Avoid specifying units for zero values, e.g. <pre><code>margin: 0</code></pre> instead of <pre><code>margin: 0px</code></pre>.</li>
+            <li>Quote attribute values in selectors, e.g. <code>input[type="text"]</code>.</li>
+            <li>Avoid specifying units for zero values, e.g. <code>margin: 0</code> instead of <code>margin: 0px</code>.</li>
             <li>Use white space to separate logical blocks of code, e.g. a blank line between modifiers / elements.</li>
           </ul>
         </div>
@@ -75,14 +75,14 @@
           <p>Sass has a lot of handy features to help help you code, cleaner, smarter and quicker, we suggest you familiarise yourself with them and start using them.</p>
           <h3>Variables</h3>
           <ul>
-            <li>Global variables should be stored in an appropriate file, e.g. <pre><code>fonts.sass</code></pre>, in the Settings folder.</li>
+            <li>Global variables should be stored in an appropriate file, e.g. <code>fonts.sass</code>, in the Settings folder.</li>
             <li>Variables specific to a certain block / template should be stored at the top of the appropriate file.</li>
             <li>Variable names should be lowercase and hyphenated.</li>
           </ul>
 
           <h3>Mixins/Functions</h3>
           <p>We have a set of Rawnet, pre-defined mixins/functions.</p>
-          <p>When creating your own, mixins/functions should be stored in their own file in the tools folder under their appropriate sub-folder, e.g. <pre><code>tools/mixins/grid.sass</code></pre>.</p>
+          <p>When creating your own, mixins/functions should be stored in their own file in the tools folder under their appropriate sub-folder, e.g. <code>tools/mixins/grid.sass</code>.</p>
           <p>Try not to get too obscure with your mixins/functions, they can help you save a lot of time, but if someone new comes to the project, they need to understand what everything does.</p>
           <p>Study the accompanying folder structure to get a good idea of where things should go.</p>
         </div>
@@ -168,26 +168,26 @@
           <p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
           <ul>
             <li>
-              <pre><code>padding</code></pre>
+              <code>padding</code>
             </li>
             <li>
-              <pre><code>margin</code></pre>
+              <code>margin</code>
             </li>
             <li>
-              <pre><code>font</code></pre>
+              <code>font</code>
             </li>
             <li>
-              <pre><code>background</code></pre>
+              <code>background</code>
             </li>
             <li>
-              <pre><code>border</code></pre>
+              <code>border</code>
             </li>
             <li>
-              <pre><code>border-radius</code></pre>
+              <code>border-radius</code>
             </li>
           </ul>
           <p>Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
-          <p>You can use bourbon's padding/margin mixins to avoid setting values unnecessarily, e.g. <pre><code>+padding(10px null 0 null)</code></pre>.</p>
+          <p>You can use bourbon's padding/margin mixins to avoid setting values unnecessarily, e.g. <code>+padding(10px null 0 null)</code>.</p>
         </div>
 
         <hr>

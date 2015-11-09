@@ -141,9 +141,13 @@ a {
     white-space: pre;
     background: transparent;
     border: 0; }
-  .main-content p pre,
-  .main-content li pre {
+  .main-content p > code,
+  .main-content li > code {
     display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    background-color: #f3f6fa;
+    border: solid 1px #dce6f0;
   }
 .main-content .highlight {
   margin-bottom: 1rem; }
