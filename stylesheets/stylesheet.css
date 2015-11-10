@@ -183,7 +183,7 @@ a {
 }
 .main-content ul.folders ul {
   padding-left: 20px;
-  margin: 5px 0 10px;
+  margin: 10px 0 15px;
 }
 .main-content ul.folders li:not(.folder) {
   font-size: 14px;
@@ -195,6 +195,7 @@ a {
   width: 16px;
   height: 16px;
   margin-right: 5px;
+  margin-top: -6px;
   background: url(file.svg);
   -webkit-background-size: cover;
   background-size: cover;
@@ -202,6 +203,7 @@ a {
 .main-content ul.folders li.folder:before {
   width: 20px;
   height: 20px;
+  margin-right: 10px;
   background: url(folder.svg);
   -webkit-background-size: cover;
   background-size: cover;
