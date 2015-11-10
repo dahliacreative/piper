@@ -192,15 +192,19 @@ a {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 5px;
   background: url(file.svg);
   -webkit-background-size: cover;
   background-size: cover;
 }
 .main-content ul.folders li.folder:before {
+  width: 20px;
+  height: 20px;
   background: url(folder.svg);
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .main-content blockquote {
   padding: 0 1rem;
