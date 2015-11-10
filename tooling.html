@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Piper by dahliacreative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Piper</h1>
+      <h2 class="project-tagline">Rawnet UI Styleguide</h2>
+      <a href="http://dahliacreative.github.io/piper/" class="btn">Home</a>
+      <a href="https://github.com/dahliacreative/piper" class="btn">View on GitHub</a>
+      <a href="https://github.com/dahliacreative/piper/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/dahliacreative/piper/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="contents">
+      <div class="main-content">
+        <h1>In this section</h1>
+        <ul>
+          <li><a href="#grunt">Grunt</a></li>
+          <li><a href="#libraries">3rd Party Libraries</a></li>
+          <li><a href="#plugins">3rd Party Plugins</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <hr>
+    
+    <section>
+      <div class="main-content">
+        <h1>Tooling</h1>
+        
+        <div id="grunt" class="sub-content">
+          <h2>Grunt</h2>
+          <p>When working on a non Rails project, we use Grunt as our build tool, this basically does all the things Rails asset pipeline does. When picking up a Grunt based project, there are a couple of things you need to do to get up and running:</p>
+          <ul>
+            <li>Clone the repo</li>
+            <li>Run <code>npm install</code></li>
+            <li>Run <code>grunt</code></li>
+          </ul>
+          <h3>What grunt does:</h3>
+          <ul>
+            <li>Compiles Sass to CSS</li>
+            <li>Concatinates &amp; Uglifies Javascript</li>
+            <li>Compiles HTML templates (optional)</li>
+            <li>Minifies SVGs</li>
+            <li>Optimises Images</li>
+            <li>Starts a local server (localhost:3000)</li>
+            <li>Watches for any other changes</li>
+          </ul>
+          <h3>Live Reload</h3>
+          <p>The watch tasks listens out for any changes and re-compiles the appropriate files when you save. If you have the Live Reload plugin installed in your browser and turned on then it will autmatically refresh the page too.</p>
+        </div>
+
+        <hr>
+
+        <div id="libraries" class="sub-content">
+          <h2>3rd Party Libraries</h2>
+          <p>For all our projects we make use of several third party libraries, these are:</p>
+          <ul>
+            <li><a href="https://developers.google.com/speed/libraries/#jquery">jQuery</a> - v2.x hosted on Google CDN</li>
+            <li><a href="https://modernizr.com/">Modernizr</a> - feature detection library</li>
+            <li><a href="http://parsleyjs.org/">ParsleyJS</a> - form validation library</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <div id="plugins" class="sub-content">
+          <h2>3rd Party Plugins</h2>
+          <p>For projects which need advanced functionality, there are often plugins we can utilise to save time. We recommend you use a plugin if there is one available above writing your own as:</p>
+          <ul>
+            <li>It will save time</li>
+            <li>We won't need to maintain it</li>
+            <li>Someone else is maintaining it</li>
+            <li>Has been tested thoroughly by lots of different people</li>
+            <li>Has a community to lean on for support</li>
+          </ul>
+          <p>Here is a list of commonly used plugins:</p>
+          <ul>
+            <li><a href="http://fancyapps.com/fancybox/">FancyBox</a> - multi-purpose lightbox</li>
+            <li><a href="https://github.com/paulstraw/FancySelect">FancySelect</a> - custom select box</li>
+            <li><a href="http://kenwheeler.github.io/slick/">Slick Slider</a> - image/content slider</li>
+            <li><a href="http://amsul.ca/pickadate.js/">Pickadate</a> - custom date/time picker</li>
+            <li><a href="https://github.com/paulstraw/sundial">Sundial</a> - an alternative to pickadate, allows date/time picker in one input</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="main-content">
+      <footer class="site-footer">
+        <p>&copy; Rawnet 2015</p>
+      </footer>
+    </section>
+  
+  </body>
+</html>

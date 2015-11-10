@@ -37,22 +37,21 @@
         <div id="general" class="sub-content">
           <h2>General Guidelines</h2>
           <ul>
-            <li>Use SVG whereever possible, this ensures a crisp image on every device and a really small file size.</li>
-            <li>Use sprites to reduce network requests.</li>
-            <li>Use inline SVG when you need to dynamically change colors.</li>
-            <li>Use inline <a href="https://lincolnloop.com/blog/svg-sprites-and-icon-systems-are-super/">SVG sprites</a> for themed icon systems.</li>
-            <li>Keep image names lowercase and hyphenated and ensure they make sense.</li>
-            <li>Use <a href="https://github.com/scottjehl/picturefill">picturefill</a> to serve appropriatley sized images to difference screen sizes.</li>
-            <li>For raster images, always save retina versions saved at a lower quality, and tell picturefill that they are 2x versions.</li>
-            <li>Always use JPG, unless trancparency is required, then use PNG.</li>
+            <li>Use SVG whereever possible, this ensures a crisp image on every device and a really small file size</li>
+            <li>Use sprites to reduce network requests</li>
+            <li>Use inline SVG when you need to dynamically change colors</li>
+            <li>Use inline <a href="https://lincolnloop.com/blog/svg-sprites-and-icon-systems-are-super/">SVG sprites</a> for themed icon systems</li>
+            <li>Keep image names lowercase and hyphenated and ensure they make sense</li>
+            <li>Use <a href="https://github.com/scottjehl/picturefill">picturefill</a> to serve appropriatley sized images to difference screen sizes</li>
+            <li>For raster images, always save retina versions saved at a lower quality, and tell picturefill that they are 2x versions</li>
+            <li>Always use JPG, unless trancparency is required, then use PNG</li>
           </ul>
-        </div>
-
 <pre><code>&lt;picture&gt;
   &lt;source srcset=&quot;examples/images/extralarge.jpg 2x&quot; media=&quot;(min-width: 1024px)&quot;&gt;
   &lt;source srcset=&quot;examples/images/art-large.jpg 2x&quot; media=&quot;(min-width: 767px)&quot;&gt;
   &lt;img srcset=&quot;examples/images/art-medium.jpg 2x&quot; alt=&quot;...&quot;&gt;
 &lt;/picture&gt;</code></pre>
+        </div>
 
       </div>
     </section>
