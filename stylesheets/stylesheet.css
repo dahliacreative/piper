@@ -179,24 +179,28 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
 }
 .main-content ul.folders ul {
   padding-left: 20px;
-  margin: 5px 0;
+  margin: 5px 0 10px;
 }
 .main-content ul.folders li:not(.folder) {
-  font-size: 16px;
+  font-size: 14px;
 }
-.main-content ul.folders .folder:before {
+.main-content ul.folders li:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-right: 5px;
-  background: url(folder.svg);
+  background: url(file.svg);
   -webkit-background-size: cover;
   background-size: cover;
+}
+.main-content ul.folders li.folder:before {
+  background: url(folder.svg);
 }
 .main-content blockquote {
   padding: 0 1rem;
