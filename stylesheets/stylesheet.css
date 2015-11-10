@@ -174,10 +174,14 @@ a {
     content: normal; }
 .main-content ul, .main-content ol {
   margin-top: 0; }
-.main-content ul.folders {
+.main-content ul.folders,
+.main-content ul.folders ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.main-content ul.folders ul {
+  padding-left: 20px;
 }
 .main-content ul.folders .folder:before {
   content: "";
@@ -187,6 +191,8 @@ a {
   height: 16px;
   margin-right: 5px;
   background: url(folder.svg);
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 .main-content blockquote {
   padding: 0 1rem;
