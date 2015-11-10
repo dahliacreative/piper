@@ -182,6 +182,10 @@ a {
 }
 .main-content ul.folders ul {
   padding-left: 20px;
+  margin: 5px 0;
+}
+.main-content ul.folders li:not(.folder) {
+  font-size: 16px;
 }
 .main-content ul.folders .folder:before {
   content: "";
