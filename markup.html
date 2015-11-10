@@ -29,6 +29,7 @@
           <li><a href="#markup">Reducing Markup</a></li>
           <li><a href="#semantics">Semantics</a></li>
           <li><a href="#validation">Validation</a></li>
+          <li><a href="#hooks">Hooks</a></li>
         </ul>
       </div>
     </section>
@@ -113,6 +114,16 @@
         <div id="validation" class="sub-content">
           <h3>Validation</h3>
           <p>Code should always be tested against the W3C, to ensure the markup is well formed, however it is understood that 100% valid code is not always possible.</p>
+        </div>
+
+        <hr>
+
+        <div id="hooks" class="sub-content">
+          <h3>Hooks</h3>
+          <ul>
+            <li>Always use classes for styling hooks.</li>
+            <li>For javascript hooks use <code>data-behaviour</code> for hooking up event listeners, and <code>data-element</code> for targeting specific elements in the DOM.</li>
+          </ul>
         </div>
         
       </div>
