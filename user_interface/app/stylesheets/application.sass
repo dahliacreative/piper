@@ -1,0 +1,49 @@
+// --------------------------------------------------------------------------
+// application.sass
+// --------------------------------------------------------------------------
+// This file will compile to application.css
+//
+// All files are imported in layers of specificity
+//
+// No specific styling should be placed in this file.
+// --------------------------------------------------------------------------
+
+//***********************************
+// Global Variables
+//***********************************
+
+@import 'variables/colors'
+@import 'variables/fonts'
+@import 'variables/breakpoints'
+@import 'variables/base'
+
+//***********************************
+// Tools
+//***********************************
+
+@import 'bourbon'
+@import 'tools/*'
+
+//***********************************
+// Vendor
+//***********************************
+
+@import '../vendor/**/*.{css,scss,sass}'
+
+//***********************************
+// Global Styles
+//***********************************
+
+@import 'global/*'
+
+//***********************************
+// Blocks
+//***********************************
+
+@import 'blocks/*'
+
+//***********************************
+// Templates
+//***********************************
+
+@import 'templates/*'
