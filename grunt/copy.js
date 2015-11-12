@@ -18,6 +18,18 @@ module.exports = {
         cwd: '<%= config.srcFolder %>/app/javascripts/data', 
         src: ['assets.json'], 
         dest: '<%= config.buildFolder %>/app/javascripts/data'
+      },
+      {
+        expand: true, 
+        cwd: '<%= config.srcFolder %>/app/data', 
+        src: ['assets.json'], 
+        dest: '<%= config.buildFolder %>/app/data'
+      },
+      {
+        expand: true, 
+        cwd: '<%= config.srcFolder %>/app/handlebars', 
+        src: ['assets.json'], 
+        dest: '<%= config.buildFolder %>/app/handlebars'
       }
     ]
   }

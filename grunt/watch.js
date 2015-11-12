@@ -40,7 +40,15 @@ module.exports = {
     }
   },
   json: {
-    files: ['<%= config.srcFolder %>/app/javascripts/data/assets.json'],
+    files: ['<%= config.srcFolder %>/app/data/**/*'],
+    tasks: ['newer:copy'],
+    options: {
+      spawn: false,
+      livereload: true
+    }
+  },
+  handlebars: {
+    files: ['<%= config.srcFolder %>/app/handlebars/**/*'],
     tasks: ['newer:copy'],
     options: {
       spawn: false,
