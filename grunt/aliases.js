@@ -4,7 +4,7 @@ module.exports = function (grunt, options) {
         baseTasks = ['clean', 'sass', 'copy', 'concat', 'uglify', 'svgmin'],
         staticTasks = [];
 
-    if(!config.concrete5) {
+    if(config.staticSite) {
         staticTasks.push('zetzer', 'connect');
     }
 
