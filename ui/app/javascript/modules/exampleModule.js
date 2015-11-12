@@ -8,12 +8,12 @@ RN.exampleModule = function() {
 
   'use strict';
 
-  function doSomething() {
-    console.log('I did something!');
-  }
-
   function init() {
     byBehaviour('selector').on('click', doSomething);
+  }
+
+  function doSomething() {
+    console.log('I did something!');
   }
 
   return {

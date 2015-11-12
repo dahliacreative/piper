@@ -1,5 +1,5 @@
 {
-    "srcFolder": "user_interface",
+    "srcFolder": "ui",
     "buildFolder": "application/themes/rawnet",
     "staticSite": false
 }

@@ -4,7 +4,7 @@
 // This mixin outputs a media query, based of the variable passed to it
 // --------------------------------------------------------------------------
 
-=bp($name)
+=breakpoint($name)
   @if map-has-key($breakpoints, $name)
     $key: map-get($breakpoints, $name)
     @media screen and (max-width: $key + 'px')
