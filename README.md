@@ -7,8 +7,7 @@ To use the boilerplate:
 - In terminal, from your project root, run `npm install`
 - Edit `GruntConfig.json` to meet your requirments
 - Ensure there is a `.gitignore` file with the following:
-    - 
-        ```
+    -   ```
         .sass-cache
         .DS_Store
         node_modules
