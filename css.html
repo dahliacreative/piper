@@ -27,7 +27,6 @@
           <li><a href="#bourbon">Bourbon</a></li>
           <li><a href="#sass">Sass - Mixins, Functions &amp; Variables</a></li>
           <li><a href="#bem">BEM (Block, Element, Modifier)</a></li>
-          <li><a href="#declarations">Declaration Order</a></li>
           <li><a href="#media-queries">Media Query Placement</a></li>
           <li><a href="#shorthand">Shorthand Notation</a></li>
           <li><a href="#classes">Class Names</a></li>
@@ -88,13 +87,24 @@
             <li>Try not to get too obscure with your mixins/functions, they can help you save a lot of time, but if someone new comes to the project, they need to understand what everything does</li>
             <li>Study the accompanying folder structure to get a good idea of where things should go</li>
           </ul>
+          <p>Ensure mixins are always place at the top of your ruleset:</p>
+<pre><code>.selector
+
+  // Mixins up here
+  +size(100%)
+  +margin(10px null)
+  +padding(10px null null 20px)
+
+  // Regular Sass down here
+  border: 1px solid #fff
+  font-size: 20px</code></pre>
         </div>
 
         <hr>
 
         <div id="bem" class="sub-content">
           <h2>BEM</h2>
-          <p>We follow the BEM (Block Element Modifier) coding standard, it helps make our CSS maintainable and scalable, while keeping specificty as low as possible.</p>
+          <p>We follow the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a> (Block Element Modifier) coding standard, it helps make our CSS maintainable and scalable, while keeping specificty as low as possible.</p>
 <pre><code>.widget
   width: 200px
   background-color: #fff
@@ -115,53 +125,20 @@
         </div>
 
         <hr>
-        
-        <div id="declarations" class="sub-content">
-          <h3>Declaration Order</h3>
-          <p>Related property declarations should be grouped together following the order:</p>
-          <ol>
-            <li>Positioning</li>
-            <li>Box Model</li>
-            <li>Visual</li>
-            <li>Typographic</li>
-          </ol>
-          <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
-          <p>Everything else takes place inside the component or without impacting the previous two sections, and thus they come last.</p>
-<pre><code>.declaration-order
-  // Positioning
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 1
-
-  // Box model
-  display: block
-  float: right
-  width: 100px
-  height: 100px
-
-  // Visual
-  background-color: #fff
-  border: 1px solid #ccc
-  border-radius: 3px
-
-  // Typography
-  font: normal 13px arial
-  line-height: 1.5
-  text-align: center
-  color: #ddd
-
-  // Misc
-  opacity: 1</code></pre>
-        </div>
-
-        <hr>
 
         <div id="media-queries" class="sub-content">
           <h2>Media Query Placement</h2>
-          <p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet, doing so only makes it easier for folks to miss them in the future.</p>
+          <p>Place media queries at the bottom of the file of the component / module / layout they are relevant to.</p>
+<pre><code>.widget
+  width: 200px
+
++breakpoint($breakpoint-medium)
+  .widget
+    width: 100px
+
++breakpoint($breakpoint-small)
+  .widget
+    width: 50px</code></pre>
         </div>
 
         <hr>

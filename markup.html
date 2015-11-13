@@ -46,7 +46,7 @@
             <li>Use soft tabs with two spaces for Rails, or four spaces for PHP — they're the only way to guarantee code renders the same in any environment</li>
             <li>Always use double quotes for attribute values</li>
             <li>Use whitespace to define logical blocks of code</li>
-            <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional</li>
+            <li>Include a trailing slash in self-closing elements</li>
             <li>Always use sentence casing for all text within HTML and use CSS to apply lowercasing, or uppercasing to meet design requirements</li>
             <li>Please seperate out re-usable code into partials where possible/appropriate</li>
           </ul>
@@ -65,7 +65,7 @@
 &lt;/html&gt;</code></pre>
           <h3>Language Attribute</h3>
           <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
-<pre><code>&lt;html lang="en-us"&gt;
+<pre><code>&lt;html lang="en"&gt;
   &lt;!-- ... --&gt;
 &lt;/html&gt;</code></pre>
           <h3>IE Compatability Mode</h3>
@@ -76,7 +76,7 @@
 <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
           <h3>Mobile Meta Tags</h3>
           <p>Include the following meta tags to deal with scaling on mobile browsers.</p>
-<pre><code>&lt;meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;</code></pre>
+<pre><code>&lt;meta name="viewport" content="width=device-width initial-scale=1.0"&gt;</code></pre>
         </div>
         
         <hr>
@@ -106,7 +106,8 @@
         
         <div id="semantics" class="sub-content">
           <h3>Semantics</h3>
-          <p>Markup should be as semantic as possible and presentational markup should be avoided however it is understood that to make something look awesome, this is sometimes unavoidable. Be aware of the document outline produced by your markup, and ensure it makes sense.</p>
+          <p>Markup should be as semantic as possible and presentational markup should be avoided however it is understood that to make something look awesome, this is sometimes unavoidable. Be aware of the document outline produced by your markup, and ensure it makes sense, there are <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo?hl=en">browser extensions</a> to aid in visualising your outline.</p>
+          <p>Use HTML5 elements, but make sure you are using them appropritatley and in the right way, <a href="http://html5doctor.com/">HTML5 Doctor</a> is a gret resource for checking how elements should be used.</p>
         </div>
         
         <hr>
