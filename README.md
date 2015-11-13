@@ -3,7 +3,7 @@ Welcome to Piper, Rawnet's UI styleguide and boilerplate.
 
 To use the boilerplate: 
 - Download the [ZIP](https://github.com/dahliacreative/piper/zipball/master)
-- Extract the ZIP to your project root
+- Extract the ZIP to your project root, make sure you extract ot the right place, as attempting to copy the files will miss required hidden files
 - In terminal, from your project root, run `npm install`
 - Edit `GruntConfig.json` to meet your requirments
 - Ensure there is a `.gitignore` file with the following:
