@@ -4,4 +4,4 @@
 - Browser & Device Support
 
 ### Things to investigate
-- Symbols for JS hook shorthands `byBehaviour`, `byElement` & `dataString`
+- Symbols for JS hook shorthands `byBehaviour()`, `byElement()` & `dataString()`
