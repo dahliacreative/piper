@@ -1,6 +1,4 @@
-# Piper
-
-## Still to add:
+# Still to add:
 - Accessibility
 - SEO
 - Browser & Device Support
