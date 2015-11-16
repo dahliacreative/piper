@@ -7,7 +7,7 @@
 =heading($name, $color: "")
   font-family: $heading-font-family
   @if not map-has-key($heading-sizes, $name)
-    @warn "Warning: `#{$name}` is not a valid breakpoint name."
+    @warn "Warning: `#{$name}` is not a valid heading name."
   @else
     font-size: map-get($heading-sizes, $name)
   @if $color != ""
