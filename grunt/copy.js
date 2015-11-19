@@ -15,9 +15,9 @@ module.exports = {
       },
       {
         expand: true, 
-        cwd: '<%= config.srcFolder %>/app/javascripts/data', 
+        cwd: '<%= config.srcFolder %>/app/javascript/data', 
         src: ['assets.json'], 
-        dest: '<%= config.buildFolder %>/app/javascripts/data'
+        dest: '<%= config.buildFolder %>/app/javascript/data'
       },
       {
         expand: true, 
