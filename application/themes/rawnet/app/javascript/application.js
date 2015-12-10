@@ -1,0 +1,2 @@
+"use strict";function byBehaviour(a){return $('[data-behaviour="'+a+'"]')}function byElement(a){return $('[data-element="'+a+'"]')}function dataString(a,b){return"[data-"+a+'="'+b+'"]'}var RN=window.RN||{};RN.exampleModule=function(){function a(){byBehaviour("selector").on("click",b)}function b(){console.log("I did something!")}return{init:a}}(),$(function(){for(var a=["exampleModule"],b=0;b<a.length;b++)RN[a[b]].init()});
+//# sourceMappingURL=application.js.map
