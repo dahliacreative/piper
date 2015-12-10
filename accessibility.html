@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Piper by dahliacreative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <div class="header">
+        <img src="stylesheets/logo.svg" alt="" id="brand">
+        <h1 class="project-name">Piper</h1>
+        <h2 class="project-tagline">Rawnet UI Coding Guidlines and project boilerplate.</h2>
+        <a href="http://dahliacreative.github.io/piper/" class="btn">Home</a>
+        <a href="https://github.com/dahliacreative/piper" class="btn">View on GitHub</a>
+        <a href="https://github.com/dahliacreative/piper/zipball/master" class="btn">Download .zip</a>
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="main-content">
+        <h1>In this section</h1>
+        <ul>
+          <li><a href="#validity">Code validity</a></li>
+          <li><a href="#context">Context</a></li>
+          <li><a href="#flow">Logical flow</a></li>
+          <li><a href="#images">Images</a></li>
+          <li><a href="#links">Links</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <hr>
+    
+    <section>
+      <div class="main-content">
+        <h1>Accessibility</h1>
+        <p>We strive to meet WCAG level A and AA standards as laid out by W3C. Depending on project requirements, this is not always possible but we should ensure the client is aware of the failures to meet this standard and the impact this has to users.</p>
+
+        
+        <div id="validity" class="sub-content">
+          <h2>Code validity</h2>
+          <ul>
+            <li>To allow assistive technologies to parse your code, it should always be tested against the W3C, to ensure the markup is well formed</li>
+            <li>Code should not error</li>
+          </ul>
+        </div>
+
+        <div id="context" class="sub-content">
+          <h2>Context</h2>
+          <ul>
+            <li>Provide context by using good semantic markup</li>
+            <li>Provide text alternatives for non-text content e.g videos and images</li>
+            <li>Meaningful content should be not be added to the dom via JavaScript </li>
+            <li>Even If missing from designs, semantic headings should be included where necessary and positioned off screen (not using display:none)</li>
+          </ul>
+        </div>
+
+        <div id="flow" class="sub-content">
+          <h2>Logical flow</h2>
+          <ul>
+            <li>Present content in a meaningful order (Turn off stylesheets to check this)</li>
+            <li>Allow users to navigate using the keyboard through the site in a meaningful tab order</li>
+          </ul>
+        </div>
+
+        <div id="images" class="sub-content">
+          <h2>Images</h2>
+          <ul>
+            <li>Only populate alt tags where an image conveys essential information </li>
+            <li>Blank alt tags should be used for superfluous content to allow screen readers to skip past them</li>
+            <li>Don’t use images of text</li>
+          </ul>
+        </div>
+
+         <div id="links" class="sub-content">
+          <h2>Link</h2>
+          <ul>
+            <li>&lt;a&gt; tags should not be used for triggering JavaScript events. All links should have a destination</li>
+            <li>All links should have text content (alt tags on linked images counts as link text)</li>
+            <li>Links to different destinations should have unique text. ‘Read more’ is not sufficient</li>
+            <li>Links should have clear focus states</li>
+          </ul>
+        </div>
+
+        <div id="resources" class="sub-content">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://www.wuhcag.com/wcag-checklist/">https://www.wuhcag.com/wcag-checklist</a></li>
+            <li><a href="ttp://wave.webaim.org/">http://wave.webaim.org/</a></li>
+            <li><a href="http://achecker.ca/checker/">http://achecker.ca/checker/</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="main-content">
+      <footer class="site-footer">
+        <p>&copy; Rawnet 2015</p>
+      </footer>
+    </section>
+  
+  </body>
+</html>
