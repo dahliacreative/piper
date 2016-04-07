@@ -16,7 +16,7 @@ module.exports = {
     }
   },
   js: {
-    files: ['<%= config.srcFolder %>/app/javascript/**/*.js', '<%= config.srcFolder %>/app/vendor/**/*.js''],
+    files: ['<%= config.srcFolder %>/app/javascript/**/*.js', '<%= config.srcFolder %>/app/vendor/**/*.js'],
     tasks: ['concat', 'uglify'],
     options: {
       spawn: false,
