@@ -39,6 +39,13 @@ module.exports = {
       livereload: true
     }
   },
+  php: {
+    files: ['<%= config.buildFolder %>/**/*.php'],
+    options: {
+      spawn: false,
+      livereload: true
+    }
+  },
   json: {
     files: ['<%= config.srcFolder %>/app/data/**/*'],
     tasks: ['newer:copy'],
